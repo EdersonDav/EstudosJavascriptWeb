@@ -1,0 +1,79 @@
+/*#paragrafos{
+    color:blue;
+    background-image:url("https://blog.easynvest.com.br/wp-content/uploads/2019/12/NM-BG-FundosInvestimentos-CS.jpg");
+    background-attachment: fixed;
+}*/
+.subDiv{
+    background: yellow
+}
+
+#Titulo{
+    color: #70e5ae;
+}
+
+.txtVerde{
+    color:green;
+}
+
+#cm{
+    background:blue;
+    width: 1cm;
+    height: 1cm
+}
+
+#mm{
+    background:red;
+    width:1mm;
+    height:1mm;
+}
+
+#in{
+    background:blue;
+    width:1in;
+    height:1in
+}
+
+#px{
+    background:red;
+    width:10px;
+    height:10px;
+}
+
+#pt{
+    background:blue;
+    width:10pt;
+    height:10pt;
+}
+
+#pc{
+    background: red;
+    width: 1pc;
+    height:1pc;
+}
+
+/*html{
+    font-size:20px;
+}*/
+
+.container{
+    width:200px;
+    height: 200px;
+    background: red;
+}
+
+.inside{
+    width:80%;
+    height: 50%;
+    background: blue;
+}
+
+#base{
+    height:10px;
+    background:red;
+}
+
+#container2{
+    background-color: blue;
+    color:white;
+    padding:10px;
+}
