@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        /*
+        #container{
+            color:yellow;
+            background-color: blue;
+            width:300px;
+            height:100px;
+            overflow: auto;
+        }
+        #quadrado{
+            width:50px;
+            height:50px;
+            background-color:blue;
+            margin: auto;
+        }
+        
+        #container2{
+            text-align:center
+        }
+
+        .static{
+            position: static;
+        }
+
+        .fixed{
+            position: fixed;
+            right: 20px;
+            bottom:20px
+        }
+
+        .relative{
+            position: relative;
+        }
+
+        .absolut{
+            position: absolute;
+        }
+
+
+        .stick{
+            position: sticky;
+            top:0;
+        }
+        .quadrado{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        .ret{
+            width: 100px;
+            height: 5000px;
+            margin: 10px;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        li{
+            float: right;
+            list-style: none;
+            padding: 10px;
+            background-color: #a457;
+            margin: 5px;
+        }
+
+        
+        .card{
+            position: relative;
+            height: 200px;
+            width: 400px;
+            border:2px solid green;
+            float: left;
+            text-align: center;
+            
+            background-color: chartreuse;
+        }
+
+        .c1{
+            line-height: 200px;
+        }
+
+        .c2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50% ,-50%);
+        }
+        img{
+            width:300px;
+        }
+        */
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            overflow: hidden;
+            margin: auto;
+            width:80%;
+            background: #5C57A4;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .menu{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        li{
+            float: left;
+            color: #fff;
+            margin-left: 15px;
+        }
+        .logo{
+            float: left;
+            color: #fff;
+        }
+        
+        @media screen and (max-width: 500px) {
+            .logo{
+                float: none;
+                text-align: center;
+            }
+
+            .menu{
+                margin-top: 20px;
+                float: none;
+                text-align: center;
+            }
+
+            li{
+                float: none;
+                margin-bottom: 5px;
+                padding: 10px;
+            }
+        }
+
+    </style>
+
+    <title>Minha Pagina</title>
+</head>
+<body>
+    <!--
+    <div>
+
+        <div>Esta é uma DIV normal</div>
+
+        <div>E aqui a história<div style="background-color: red;width:500px;"> div de dentro</div>continua</div>
+    
+
+    </div>
+
+    <div>
+
+        <p>Este é um paragrafo normal</p>
+
+        <p>E aqui a historis continua</p>
+
+    </div>
+
+    <p>
+
+        Aqui eu tenho o inicio de um paragrafo <span style="background-color: green;width:500px">um SPAN no meio</samp> E o fim do paragrafo
+
+    </p>
+
+    <p>
+
+        Aqui eu tenho o inicio de um paragrafo <div>um div no meio</div> E o fim do paragrafo
+
+    </p>
+
+    <p>
+
+        Aqui eu tenho o inicio de um paragrafo <img style="display: none;" src="https://www.pontofrio-imagens.com.br/Informatica/Computadores/13741593/1083447092/pc-gamer-g-fire-htg-311-a10-9700-8gb-radeon-r7-2gb-integrada-1tb-monitor-185-13741593.jpg"
+        height="150px"> E o fim do paragrafo
+
+    </p>
+
+    <div id="container">
+        <img src="https://www.pontofrio-imagens.com.br/Informatica/Computadores/13741593/1083447092/pc-gamer-g-fire-htg-311-a10-9700-8gb-radeon-r7-2gb-integrada-1tb-monitor-185-13741593.jpg"
+        height="150px">
+    </div>
+
+    <div id="quadrado">
+
+    </div>
+
+    <div id="container2">
+
+        <img src="https://www.pontofrio-imagens.com.br/Informatica/Computadores/13741593/1083447092/pc-gamer-g-fire-htg-311-a10-9700-8gb-radeon-r7-2gb-integrada-1tb-monitor-185-13741593.jpg"
+        height="150px">
+    </div>
+
+    
+    <div class="static quadrado blue">
+
+    </div>
+
+    <div class=" fixed quadrado red">
+
+    </div>
+
+    <div class="blue ret">
+        <div class="quadrado red"></div>
+        <div class="quadrado green stick"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+        <div class="quadrado red"></div>
+    </div>
+    
+    <ul>
+        <li>Home</li>
+        <li>Contato</li>
+        <li>Sobre</li>
+    </ul>
+
+    <div class="card">
+        <div class="c1">
+            Ederson Silva
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="c2">
+            Ederson Silva
+        </div>
+    </div>
+
+    <img src="https://www.pontofrio-imagens.com.br/Informatica/Computadores/13741593/1083447092/pc-gamer-g-fire-htg-311-a10-9700-8gb-radeon-r7-2gb-integrada-1tb-monitor-185-13741593.jpg"
+    >
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti est aliquam! Dolorem, nisi ut impedit obcaecati quos libero modi rem blanditiis, aliquid quaerat doloremque error, nesciunt saepe unde et. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis a incidunt harum ut modi distinctio corporis ad eum voluptatum, recusandae eveniet aliquid cum soluta tempora, quod dolor temporibus, totam delectus.Expedita quia ut exercitationem beatae quo quod, ullam magni necessitatibus. Eveniet voluptatem explicabo ipsa animi. Incidunt id numquam doloremque consequuntur in quibusdam dicta ea nesciunt, porro omnis sit eius aliquam.</p>
+
+    -->
+    <div class="header">
+
+        <div class="logo">
+            Logo
+        </div>
+        
+        <ul class="menu">
+            <li>Home</li>
+            <li>Cursos</li>
+            <li>Contato</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
