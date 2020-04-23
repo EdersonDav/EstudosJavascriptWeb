@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body{
+    font-family: 'Comic Neue', cursive;
+    background-color: black;
+}
+
+.fundo{
+    background-image:url("../Img/backgorund.png");
+    background-size: 400px 200px;
+    background-repeat: no-repeat;
+    padding: 10px;
+    
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+h2{
+    margin-left: 40px;
+}
+
+ul{
+    list-style-type: none;
+}

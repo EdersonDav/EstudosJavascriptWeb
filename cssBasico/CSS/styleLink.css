@@ -1,0 +1,15 @@
+.link{
+    text-decoration: none;
+    color: #bc2035;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: solid 2px #bc2035
+
+}
+
+.link:active{
+    background-color: #bc2035 ;
+    color:#fff; 
+}
