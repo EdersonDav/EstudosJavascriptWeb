@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Intermediario</title>
     <style>
-        .paragrafo{
-            color: red;
-        }
+        
     </style>
 </head>
 <body>
-    <h1>Titulo</h1>
-    <p class="paragrafo" id="P01">P01</p>
-    <p class="paragrafo">P02</p>
-    <p>P03</p>
+    <h1>Click in my</h1>
+    <input type="text" oninput="valor(this)">
 
+    <script>
+        function valor(w){
+           let h1 = document.querySelector('h1')
+           h1.innerText = w.value
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
