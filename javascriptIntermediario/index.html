@@ -5,18 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Intermediario</title>
     <style>
+        /*
+        img{
+            width:200px;
+            margin-bottom: 25px;
+        }
+
+        div{
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }*/
         
     </style>
 </head>
 <body>
-    <h1>Click in my</h1>
-    <input type="text" oninput="valor(this)">
+   
+    <!--
+        <img src="https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0?e=2159024400&v=beta&t=C7KMOtnrJwGrMXmgIk2u1B8a7VRfgxMwXng9cdP9kZk" alt="sorvete">
+        <br>
+        <div onmouseover="onOver(this)" onmouseout="onOut(this)">click</div>
+        <br>
+        <p>Texto</p>
 
+        
+        <div id="d1">
+
+            <h1>Teste</h1>
+            <p>qualquer texto</p>
+
+        </div>
+        
+        <div id="d2">
+
+            <h1>Teste 2</h1>
+            <p>qualquer texto 2</p>
+
+        </div>
+    -->
+
+    <h1 id="h1">Titulo</h1>
+    <button onclick="iniciar()">iniciar</button>
+    <button onclick="parar()">parar</button>
+    <button onclick="limpar()">limpar</button>
     <script>
+
+        var obj
+
+        function iniciar (){
+            let h1 = document.querySelector("#h1")
+            /*
+            h1.innerHTML = 'Novo titulo'
+
+            setTimeout(function(){
+                h1.style.color = 'blue'
+            }, 1000)*/
+            let numero = 0
+            obj = setInterval(() => {
+                h1.innerHTML =  numero
+                numero++
+            }, 0);
+        }
+
+        function parar(){
+            clearInterval(obj)
+        }
+        function limpar(){
+            h1.innerHTML = ''
+        }
+        /*
+        let desc = {
+            nome:"Ederson",
+            idade:24
+        }
+
+        //localStorage.setItem("desc", JSON.stringify(desc))
+
+        console.log(JSON.parse(localStorage.getItem("desc")))
+
+        var h1 = document.getElementById('h1')
+
+        onload = function(){
+            let historico = localStorage.getItem("nome")
+            h1.innerHTML = historico
+        }
+
+        function inserir(e){
+            let valor = e.value
+            //console.log(e.value)
+
+            h1.innerHTML = valor
+
+            localStorage.setItem("nome",valor)
+            
+            console.log(Number(localStorage.getItem("nome")))
+        }
+
+        let desc = {
+            nome:"Ederson",
+            idade:24
+        }
+        
+        console.log(desc)
+
+        let descString = JSON.stringify(desc)
+
+        console.log(descString)
+
+        let descObject = JSON.parse(descString)
+
+        console.log(descObject)
+
+        window.onload = function(){
+            let d1 = document.getElementById('d1')
+
+            //Pega o elemeto filho
+            console.log(d1.children[0])
+            let h1 = d1.children[0]
+
+            //Pega o elemento pai
+            console.log(h1.parentElement)
+
+        }
+
+
         function valor(w){
            let h1 = document.querySelector('h1')
            h1.innerText = w.value
         }
+        function onOver(e){
+            e.style.backgroundColor = "green"
+        }
+        function onOut(e){
+            e.style.backgroundColor = "cornflowerblue"
+        }
+        function load(){
+
+            let t = document.getElementById('title')
+
+            //t.onclick = novaFunction
+            t.addEventListener('click',novaFunction)
+        }
+
+        function novaFunction(){
+            this.innerHTML = "Novo Texto"
+        }
+        */
+        
     </script>
     <script src="script.js"></script>
 </body>
