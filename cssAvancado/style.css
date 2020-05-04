@@ -1,0 +1,158 @@
+
+/* h1::first-letter{
+  color: rebeccapurple;
+  font-size: 3rem;
+}
+
+p::first-line{
+  color: aqua;
+}
+li{
+  list-style: none;
+}
+li::before{
+  content: '';
+  position: inline-block;
+  height: 30px;
+  width: 30px;
+  background-image: url(./37372.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+p::selection{
+  background-color: salmon;
+  color: grey;
+}
+ */
+
+/* input:focus{
+  color: red;
+}
+li:first-of-type{
+  color: blue;
+}
+li:nth-child(3){
+  color: brown;
+} 
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+}
+li:nth-of-type(odd){
+  background-color: cadetblue;
+  color: #fff;
+}
+li:nth-of-type(even){
+  background-color: rgb(185, 252, 118);
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+.container{
+  width: 100%;
+  background-color: blue;
+}
+.primeira{
+  display: inline-block;
+  margin: auto -4px -4px auto;
+  width: calc(100% - 300px);
+  height: 300px;
+  background-color: yellow;
+}
+.segunda{
+  margin: auto -4px -4px auto;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-color: green;
+}
+
+img{
+  width: 300px;
+  transform: scale(0.5);
+}
+img:hover{
+  transform: scale(1) skew(45deg);
+}
+
+:root{
+  --color : aqua
+}
+.p1{
+  color: var(--color)
+}
+.p3{
+  color: var(--color)
+}
+*/
+
+/* DISPLAY FLEX
+.container{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgrey;
+  color:#fff;
+  height: 500px;
+}
+
+.r1{
+  background-color: red;
+  align-self: flex-start;
+}
+
+.r2{
+  background-color: blue;
+  
+}
+
+.r3{
+  background-color: green;
+  align-self: flex-end;
+}
+
+.rect{
+  width: 150px;
+  height: 150px;
+} */
+
+.container{
+  color:#fff;
+  display: grid;
+  /* padding: 10px; */
+  background-color: gray;
+  /* grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto; */
+  grid-template: auto auto auto /  auto auto auto;
+  /* justify-items: center;
+  align-items: center; */
+  justify-content: center;
+  /* align-content: stretch; */
+  grid-gap: 10px;
+  
+}
+
+.r1{
+  background-color: red;
+}
+
+.r2{
+  background-color: blue;
+}
+
+.r3{
+  background-color: green;
+}
+
+.rect{
+  width: 200px;
+  height: 200px;
+}
