@@ -127,17 +127,18 @@ img:hover{
 .container{
   color:#fff;
   display: grid;
-  /* padding: 10px; */
+  padding: 10px;
   background-color: gray;
-  /* grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto auto; */
-  grid-template: auto auto auto /  auto auto auto;
-  /* justify-items: center;
-  align-items: center; */
-  justify-content: center;
-  /* align-content: stretch; */
-  grid-gap: 10px;
-  
+  height: 900px;
+  grid-gap: 5px;
+  grid-template:auto auto auto auto auto auto auto/auto auto auto auto auto auto;
+  /* grid-template-areas:"a2 a2 a2 a2 a2 a2"
+                      "a1 a3 a3 a3 a3 a8"
+                      "a1 a4 a4 a4 a4 a8"
+                      "a1 a5 a5 a5 a5 a8"
+                      "a1 a6 a6 a6 a6 a8"
+                      "a1 a7 a7 a7 a7 a8"
+                      "a9 a9 a9 a9 a9 a9" */
 }
 
 .r1{
@@ -152,7 +153,59 @@ img:hover{
   background-color: green;
 }
 
-.rect{
-  width: 200px;
-  height: 200px;
+.item1{
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 7;
+
+}
+.item2{
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+}
+.item3{
+  grid-column-start:span 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+}
+.item4{
+  grid-column-start:span 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+}
+.item5{
+  grid-column-start:span 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+}
+.item6{
+  grid-column-start:span 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+}
+.item7{
+  grid-column-start:span 4;
+  grid-row-start: 6;
+  grid-row-end: 7;
+
+}
+.item8{
+  grid-column-start:6 ;
+  grid-row-start: 2;
+  grid-row-end: 7;
+
+}
+.item9{
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 8;
+
 }
