@@ -1,13 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    #red {
+      width: 500px;
+      height: 500px;
+      background-color: red;
+      display: none;
+      position: absolute;
+    }
+
+    #green {
+      width: 300px;
+      height: 300px;
+      background-color: green;
+      position: absolute;
+    }
+  </style>
 </head>
+
 <body>
-  
-  
+  <!-- <h1 class="titulo">Esse é um titulo</h1>
+  <h1>Outro titulo</h1> -->
+
+  <button id="button">animate</button>
+  <div id="green"></div>
+  <div id="red"></div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    //Selecionando elementos 
+    //___________________
+    // setInterval(() => {
+    //   $(".titulo").hide()
+    //   setTimeout(() => {
+    //     $(".titulo").show()
+    //   }, 100)
+    // }, 1000)
+
+    // setInterval(() => {
+    //   document.querySelector(".titulo").style.display = "none"
+    //   setTimeout(() => {
+    //     document.querySelector(".titulo").style.display = "block"
+    //   }, 100)
+    // }, 1000)
+
+    //Adicionando eventos
+    //___________________
+    // $(document).mouseleave(() => {
+    //   console.log("Não saia")
+    // })
+
+    // document.addEventListener("mouseleave", () => {
+    //   console.log("Não saia")
+    // })
+
+    //Animações
+    //_________________
+    // $("#green").mouseenter(() => {
+    //   $("#green").animate({
+    //     width: 500,
+    //     height: 500
+    //   }, 100)
+    // })
+    // $("#green").mouseleave(() => {
+    //   $("#green").animate({
+    //     width: 300,
+    //     height: 300
+    //   }, 100)
+    // })
+
+    //Callbak
+    //______________________
+    // function callBack() {
+    //   $("#red").show(2000)
+    // }
+
+    // $("#button").click(() => {
+    //   $("#green").hide(2000, callBack)
+    // })
+
+
+  </script>
 </body>
+
 </html>
