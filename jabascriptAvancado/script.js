@@ -288,3 +288,53 @@ function buscarCEP() {
     })
 }
 */
+
+//Spred Operator
+/*
+var pessoa = {
+  name: "Ederson",
+  idade: 25
+}
+
+var contato = {
+  telefone: 123456789,
+  email: "ederson.silva@gmail.com"
+}
+
+var copiaPessoa = { ...pessoa }
+copiaPessoa.idade = 88
+
+var copiaPessoaECopiaContato = { ...pessoa, ...contato }
+console.log(copiaPessoaECopiaContato);
+*/
+
+//Desestruração de um objeto
+
+var aluno1 = {
+  matricula: 1234,
+  nome: 'João',
+  telefone: 147258369,
+  cidade: 'Mogi das Cruzes'
+}
+
+//Criando uma variavel nome e matricula e colocando nela o valor da propiedade nome e matricula do objeto aluno
+var { matricula, nome } = aluno1
+
+//criando uma copia de aluno mas sem a propiedade nome
+// e criando a variavel nome e colocando o valor de aluno.nome 
+var { nome, ...copiaAlunoMenosOnome } = aluno1
+
+
+var aluno2 = {
+  matricula: 178634,
+  nome: 'Pedro',
+  telefone: 14727523369,
+  cidade: 'Mogi das Cruzes'
+}
+
+//alunos é um array de objetos aluno
+var alunos = [aluno1, aluno2]
+
+//Diferente de objeto para o array não vale o nome igual para a desestruturação, mas sim a posição,
+//Nesse caso joao vale o valor do primeiro objeto e pedro o valor do segundo objeto
+var [joao, pedro] = alunos
