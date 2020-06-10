@@ -191,3 +191,70 @@
 // $('h1').css({"font-size": "26px",
 //             "background-color": "red"})
 
+//______________________
+//Dimensões
+// let largura, altura, larguraComPadding, alturaComPadding
+// let box = $(".box")
+
+//Pegando os valores
+// largura = box.width()
+// altura = box.height()
+// larguraComPadding = box.innerWidth()
+// alturaComPadding = box.innerHeight()
+// console.log("largura = ", largura);
+// console.log("altura = ", altura);
+// console.log("largura com padding = ", larguraComPadding);
+// console.log("altura com padding = ", alturaComPadding);
+
+//Alterando o valor
+// largura = box.width(200)
+// altura = box.height(200)
+
+//______________________
+//Elementos irmãos 
+// let selected = $("#div3")
+
+//Selecionando todos os irmãos menos o que foi passado no parametro
+// console.log(selected.siblings());
+
+//Pegando um irmão especifico
+// console.log(selected.siblings("#div5"));
+
+//Pegando os elementos que estão depois do que foi selecionado
+// console.log(selected.nextAll())
+
+//Pegando um elemento especifico que está depois do que foi selecionado
+// console.log(selected.nextAll("#div5"))
+
+//Pegando só o proximo
+// console.log(selected.next())
+
+//Pegando só o antecessor
+// console.log(selected.prev())
+
+//Pegando todos os antecessores
+// console.log(selected.prevAll())
+
+//Pegando os proximos até o elemento que eu quero
+//No caso está pegando um depois da div1 até um antes da div4
+// console.log($("#div1").nextUntil("#div4"));
+
+//______________________
+//Filter, Last, First e Eq
+
+// let selected = $("div")
+
+//Filtrando todas as divs que tem a classe cinza
+// console.log(selected.filter(".cinza"));
+
+//Peganso só o primeiro elemento que tem a classe cinza
+// console.log(selected.filter(".cinza").first());
+
+//Peganso só o ultimo elemento que tem a classe cinza
+// console.log(selected.filter(".cinza").last());
+
+//Peganso todos os elementos que não tem a classe cinza
+// console.log(selected.not(".cinza"));
+
+//Peganso o elemento atravez do index da div
+// console.log(selected.eq(8));

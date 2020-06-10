@@ -23,10 +23,22 @@
   padding: 5px;
 } */
 
-.bg-blue {
+/* .bg-blue {
   background-color: blue;
 }
 
 .bg-green {
   background-color: green;
+} */
+
+/* .box{
+  width: 100px;
+  height: 100px;
+  background-color: burlywood;
+  padding: 20px;
+} */
+
+.cinza{
+  background-color: gray;
+  color: #fff;
 }
