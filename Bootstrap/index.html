@@ -6,17 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
   <style>
     .hide {
       display: none;
+    }
+
+    .w300 {
+      max-width: 300px;
     }
   </style>
   <title>Bootstrap</title>
 </head>
 
 <body>
-
-  <!-- <div class="btn btn-info">Enviar</div> -->
 
   <!-- Textos 
   <div class="text-muted">muted</div>
@@ -176,20 +187,400 @@
   </table>
   -->
 
-  <!-- Alert -->
-  <div class="alert alert-danger hide">
+  <!-- Alert
+  <input type="email" name="email" id="email">
+  <button onclick="enviar()">Cadastrar</button>
+  <div id="erro" class="alert alert-danger alert-dismissible hide">
+    <button class="close" data-dismiss="alert">&times;</button>
     <strong>Erro:</strong> O campo não pode estar vazio
+    <a class="alert-link" href="#">Ajusta ai</a>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+  <script>
+    const enviar = () => {
+      if ($('input')[0].value == "") {
+        $('#erro').removeClass("hide");
+
+      };
+    };
+  </script> -->
+
+  <!-- Botão 
+
+  <button type="button" class="btn">Basic</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-link">Link</button>
+  <input type="submit" class="btn btn-success" value="Enviar">
+  <a class=" btn btn-primary" href="#">Facebook</a>
+  <br>
+  <button type="button" class="btn">Basic</button>
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-danger disabled">Danger</button>
+  <button type="button" class="btn btn-outline-dark active">Dark</button>
+  <button type="button" class="btn btn-outline-light ">Light</button>
+  <button type="button" class="btn btn-outline-link">Link</button>
+
+  <input type="submit" class="btn btn-outline-success" value="Enviar">
+  <a class=" btn btn-outline-primary" href="#">Facebook</a>
+  -->
+
+  <!-- Grpos de Botões
+  group - serve como um agrupador
+  lg - large(tamanho grande)
+  sm - small(tamanho pequeno)
+  btn-group-vertical - coloca o grupo na vertical
+  
+  <div class="container">
+    <div class="btn-group-vertical btn-group-lg">
+      <button type="button" class="btn btn-outline-dark ">1</button>
+      <button type="button" class="btn btn-outline-dark ">2</button>
+      <button type="button" class="btn btn-outline-dark">3</button>
+    </div>
+  </div>
+  -->
+
+  <!-- Collapse 
+    esse efeito não se apliva só a imagens
+  
+  <a data-toggle="collapse" href="#img">Mostrar imagem</a>
+  <img id="img" class="img-thumbnail img-fluid collapse" src="img/img.jpg" style="width: 800px;" alt="">
+  -->
+
+  <!-- Dropdown
+  <div class="container">
+    <div class="dropdown">
+      <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Atividades</button>
+      <div class="dropdown-menu">
+        <div class="dropdown-header">LE</div>
+        <a class="dropdown-item" href="#">lelellele</a>
+        <a class="dropdown-item" href="#">lelellele</a>
+        <a class="dropdown-item" href="#">lelellele</a>
+        <a class="dropdown-item" href="#">lelellele</a>
+        <a class="dropdown-item" href="#">lelellele</a>
+        <div class="dropdown-header">LA</div>
+        <a class="dropdown-item" href="#">lalalalala</a>
+        <a class="dropdown-item" href="#">lalalalala</a>
+        <a class="dropdown-item" href="#">lalalalala</a>
+        <a class="dropdown-item" href="#">lalalalala</a>
+        <a class="dropdown-item" href="#">lalalalala</a>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Card 
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="img/img.jpg" alt="">
+      <div class="card-header">
+        <h4 class="card-title">Lorem ipsum</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-text">Dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+      <dic class="card-footer">
+        <a href="#">Saiba Mais</a>
+      </dic>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="img/img.jpg" alt="">
+      <div class="card-header">
+        <h4 class="card-title">Lorem ipsum</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-text">Dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+      <dic class="card-footer">
+        <a href="#">Saiba Mais</a>
+      </dic>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="img/img.jpg" alt="">
+      <div class="card-header">
+        <h4 class="card-title">Lorem ipsum</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-text">Dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+      <dic class="card-footer">
+        <a href="#">Saiba Mais</a>
+      </dic>
+    </div>
+  </div>
+  -->
+
+  <!-- Acordion 
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a href="#resp1" class="card-link" data-toggle="collapse">Sua pergunta N1</a>
+      </div>
+      <div id="resp1" data-parent="#accordion" class="collapse">
+        <div class="card-body">Dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a href="#resp2" class="card-link" data-toggle="collapse">Sua pergunta N2</a>
+      </div>
+      <div id="resp2" data-parent="#accordion" class="collapse">
+        <div class="card-body">Dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a href="#resp3" class="card-link" data-toggle="collapse">Sua pergunta N3</a>
+      </div>
+      <div id="resp3" data-parent="#accordion" class="collapse">
+        <div class="card-body">Dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+    </div>
+  </div>
+  -->
+
+  <!-- Progress bar 
+
+  <div class="progress">
+    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"></div>
+  </div>
+
+  <script>
+    let progress = document.querySelector(".progress-bar")
+
+    let valu = 0
+    setInterval(() => {
+      if (valu > 100) {
+        valu = 100
+      }
+      progress.innerHTML = `${valu}%`
+      progress.style = `width: ${valu}%`
+      valu++
+    }, 00);
+  </script>
+  -->
+
+  <!-- Spiner 
+
+  <div class="spinner-border text-danger "></div>
+  <div class="spinner-grow text-danger "></div>
+  -->
+
+  <!-- Lista Agrupada 
+
+  <ul class="list-group">
+    <li class="list-group-item">Item 1</li>
+    <li class="list-group-item active">Item 2</li>
+    <li class="list-group-item">Item 3</li>
+  </ul>
+  <div class="container">
+    <div class="list-group list-group-horizontal justify-content-center">
+      <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Item 1</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Item 2</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-success">Item 3</a>
+    </div>
+  </div>
+  -->
+
+  <!-- Paginação 
+  <ul class="pagination">
+    <li class="page-item"> <a href="#" class="page-link">Anterior</a> </li>
+    <li class="page-item"> <a href="#" class="page-link">1</a> </li>
+    <li class="page-item active"> <a href="#" class="page-link">2</a> </li>
+    <li class="page-item"> <a href="#" class="page-link">3</a> </li>
+    <li class="page-item"> <a href="#" class="page-link">Próximas</a> </li>
+  </ul>
+  -->
+
+  <!-- Navegação 
+  <ul class="nav justify-content-end">
+    <li class="nav-item"> <a href="#" class="nav-link"> Home </a></li>
+    <li class="nav-item"> <a href="#" class="nav-link"> Contato </a></li>
+    <li class="nav-item"> <a href="#" class="nav-link"> Sobre </a></li>
+  </ul>
+  <br>
+  <ul class="nav nav-tabs justify-content-end">
+    <li class="nav-item"> <a href="#" class="nav-link"> Home </a></li>
+    <li class="nav-item"> <a href="#" class="nav-link"> Contato </a></li>
+    <li class="nav-item"> <a href="#" class="nav-link"> Sobre </a></li>
+  </ul>
+  <br>
+  <ul class="nav nav-pills justify-content-end">
+    <li class="nav-item"> <a href="#" class="nav-link"> Home </a></li>
+    <li class="nav-item"> <a href="#" class="nav-link active"> Contato </a></li>
+    <li class="nav-item"> <a href="#" class="nav-link"> Sobre </a></li>
+  </ul>
+  -->
+
+  <!-- Navegação um elemento interassante 
+  <ul class="nav nav-tabs justify-content-end">
+    <li class="nav-item"> <a data-toggle="tab" href="#Home" class="nav-link "> Home </a></li>
+    <li class="nav-item"> <a data-toggle="tab" href="#Contato" class="nav-link"> Contato </a></li>
+    <li class="nav-item"> <a data-toggle="tab" href="#Sobre" class="nav-link"> Sobre </a></li>
+  </ul>
+  <div class="tab-contet">
+    <div class="tab-pane fade" id="Home">
+      <h1>Mostrando items da Home</h1>
+    </div>
+    <div class="tab-pane fade" id="Contato">
+      <h1>Mostrando items da Contato</h1>
+    </div>
+    <div class="tab-pane fade" id="Sobre">
+      <h1>Mostrando items da Sobre</h1>
+    </div>
+  </div>
+  -->
+
+  <!-- Navbar 
+  <nav class=" navbar  navbar-expand-sm  bg-dark navbar-dark">
+    <div class="navbar-brand">Navbar</div>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mybar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="mybar" class="collapse navbar-collapse justify-content-end">
+      <ul class=" navbar-nav ">
+        <li class=" nav-item"> <a data-toggle="tab" href="#Home" class="nav-link "> Home </a></li>
+        <li class="nav-item"> <a data-toggle="tab" href="#Contato" class="nav-link"> Contato </a></li>
+        <li class="nav-item"> <a data-toggle="tab" href="#Sobre" class="nav-link"> Sobre </a></li>
+      </ul>
+    </div>
+  </nav>
+  -->
+
+  <!-- Carrossel
+  <div id="myCar" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+
+      <ul class="carousel-indicators">
+        <li data-target="#myCar" data-slide-to="0" class="active"></li>
+        <li data-target="#myCar" data-slide-to="1"></li>
+        <li data-target="#myCar" data-slide-to="2"></li>
+      </ul>
+
+      <div class="carousel-item active">
+        <div class="bg-info text-light d-flex justify-content-center align-items-center"><img src="img/img.jpg"
+            width="500" alt=""></div>
+      </div>
+      <div class="carousel-item ">
+        <div class="bg-danger text-light d-flex justify-content-center align-items-center"><img src="img/img.jpg"
+            width="500" alt=""></div>
+      </div>
+      <div class="carousel-item">
+        <div class="bg-dark text-light d-flex justify-content-center align-items-center"><img src="img/img.jpg"
+            width="500" alt=""></div>
+      </div>
+    </div>
+    <a href="#myCar" class="carousel-control-prev" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a href="#myCar" class="carousel-control-next" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  -->
+
+  <!-- Modal 
+  <div class="container">
+    <button data-toggle="modal" data-target="#mymodal">Mostrar Modal</button>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia aperiam distinctio in, fugit voluptatem nisi
+      nostrum a esse quo beatae ipsum eum soluta neque quasi veritatis voluptatibus. Dolores, necessitatibus cupiditate.
+      Perferendis corrupti officiis praesentium deserunt fugit ipsa nostrum expedita id vero officia optio, repellendus
+      dignissimos eos. Quidem atque ipsam cumque dolore molestiae. Officiis alias corrupti itaque assumenda autem
+      placeat pariatur.
+      Culpa suscipit corporis neque facilis ipsam asperiores voluptas sapiente quo earum iste, dolor, esse fugit?
+      Recusandae, numquam cum? Illum, quasi. Laboriosam sequi minima iusto natus fugiat laudantium consequuntur cum
+      quisquam.
+      Mollitia expedita odit perspiciatis doloribus. Inventore sint quae voluptas saepe quo fugiat laborum nobis neque
+      molestiae quibusdam! Porro ut laboriosam ea consequatur? Quibusdam in officiis reprehenderit, iusto nisi iste!
+      Recusandae!
+      Veniam culpa expedita voluptatibus cupiditate iure numquam laudantium esse, debitis, amet commodi animi nostrum
+      aspernatur, tempora magni ab exercitationem repellendus eos totam mollitia inventore eum vero. Eaque in enim
+      repudiandae?
+      Velit, debitis molestiae incidunt modi temporibus magni dolores harum ex earum nostrum repellat ullam facere illum
+      sed fugit quaerat. Sit sed minus, porro nulla deserunt quidem quas? Consequuntur, incidunt debitis?
+      Consequatur nisi sed voluptatem qui voluptatibus aperiam excepturi quasi sit maiores magnam fuga delectus libero
+      dolorum quo sequi dicta, vero corrupti unde ad numquam rerum officiis obcaecati, ea minima! Repellat?
+      Natus optio rerum expedita amet eveniet nemo facilis delectus consequatur aut inventore commodi adipisci ex est
+      facere dolorem nam, nihil dignissimos necessitatibus! Repellat nostrum voluptatibus temporibus officia aperiam
+      quas dolores?
+      Repellat voluptatibus fugiat error commodi, sequi repudiandae voluptate molestiae suscipit adipisci quisquam animi
+      vitae tenetur autem quasi voluptas. Accusamus dolor dolorum quasi provident sapiente doloremque sed porro sunt
+      totam dolore.
+      Laboriosam voluptate deserunt ipsam voluptas illum sit. Repellat porro ex at! Animi eaque suscipit dolorum rem id
+      culpa, asperiores nostrum sequi praesentium repellendus. Suscipit ea voluptate illum vitae, beatae non?</p>
+
+  </div>
+  <div class="modal fade" id="mymodal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">Meu Modal</div>
+        <div class="modal-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae culpa fugiat
+          distinctio eaque, unde officiis est nesciunt obcaecati doloremque corrupti! Quidem id velit at molestiae!
+          Aperiam excepturi molestias eaque quam!</div>
+
+      </div>
+    </div>
+  </div>
+
+  -->
+
+  <!-- ToolTip 
+  <a href="#" data-toggle="tooltip" title="Nem vai fi">Nem clica</a>
+  <script>
+    $(document).ready(() => {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  </script>
+  -->
+
+  <!-- PopOver 
+  <a href="#" data-trigger="hover" data-toggle="popover" title="Nem vai fi">Nem clica</a>
+  <script>
+    $(document).ready(() => {
+      $('[data-toggle="popover"]').popover()
+    });
+  </script>
+  -->
+
+  <!-- Toast 
+
+  <div class="container m-5">
+    <button class="btn btn-primary " id="meuBotao">Mostrar Toast</button>
+    <button class="btn btn-danger " id="sumir">Sumir Toast</button>
+    <div class="toast" data-autohide="false">
+      <div class="toast-header">
+        <h1>Título</h1>
+      </div>
+      <div class="toast-body">
+        <p>Testo do corpo</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(() => {
+      $("#meuBotao").click(() => {
+        $(".toast").toast("show")
+      })
+      $("#sumir").click(() => {
+        $(".toast").toast("hide")
+      })
+    })
+  </script>
+  -->
+
+
+
 </body>
 
 </html>
