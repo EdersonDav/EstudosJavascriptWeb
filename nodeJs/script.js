@@ -9,11 +9,18 @@
 //o primeiro e o segundo são strings por isso que eu os ignoro com slice e pego do segundo em diante
 let args = process.argv.slice(2)
 
-let a = Number(args[0]);
-let b = Number(args[1]);
+//Importando o objeto calc  
+let calc = require("./calc.js")
+let a = Number(args[1]);
+let b = Number(args[2]);
+let c
 
-let c = (a, b) => {
-  return a + b
+if (args[0] == "s") {
+  c = calc.soma(a, b)
+} else if (args[0] == "m") {
+  c = calc.mult(a, b)
+} else {
+  c = "Opção invalida"
 }
 
-console.log(c(a, b));
+console.log(c);
