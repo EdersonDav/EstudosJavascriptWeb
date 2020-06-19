@@ -109,6 +109,6 @@
 //   })
 // })
 
-let ede = require("ede")
+// let ede = require("ede")
 
-console.log(ede.nomeCompleto("Ederson", "Silva"))
+// console.log(ede.nomeCompleto("Ederson", "Silva"))
