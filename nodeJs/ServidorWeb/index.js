@@ -25,22 +25,46 @@ const http = require("http");
 const url = require("url");
 const fs = require("fs");
 
+function handleFile(req, res, callback) {
+  let path = url.parse(req.url).pathname;
+
+  if (path == "" || path == "/") {
+    path = "/index.html";
+  }
+  let fileName = `.${path}`;
+
+  fs.readFile(fileName, (error, data) => {
+    if (error) {
+      if (callback) {
+        if (!callback(req, res)) {
+          res.writeHead(404, { "Content-Type": "text/plain" });
+          res.end("404 - Not Found");
+        }
+      }
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(data);
+    }
+  });
+}
+
+function handleRequest(req, res) {
+  let path = url.parse(req.url).pathname;
+  let met = req.method;
+  console.log(met);
+  if (met == "PUT") {
+    res.writeHead(404, { "Content-Type": "text/plain" });
+  }
+  if (path == "/test") {
+    res.end("Teste");
+    return true;
+  }
+  return false;
+}
+
 http
   .createServer((request, response) => {
-    let path = url.parse(request.url).pathname;
-    if (path == "" || path == "/") {
-      path = "/index.html";
-    }
-    let fileName = `.${path}`;
-    fs.readFile(fileName, (error, data) => {
-      if (error) {
-        response.writeHead(404, { "Content-Type": "text/plain" });
-        response.end("404 - Not Found");
-      } else {
-        response.writeHead(200, { "Content-Type": "text/html" });
-        response.end(data);
-      }
-    });
+    handleFile(request, response, handleRequest);
   })
   .listen(3000, (error) => {
     if (error) {

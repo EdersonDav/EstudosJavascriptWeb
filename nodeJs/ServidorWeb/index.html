@@ -7,5 +7,56 @@
   </head>
   <body>
     <h1>Index</h1>
+    <button onclick="GET()">GET</button>
+    <button onclick="POST()">POST</button>
+    <button onclick="PUT()">PUT</button>
+    <button onclick="DEL()">DEL</button>
+    <script>
+      const url = "http://localhost:3000/test";
+      function GET() {
+        fetch(url, {
+          method: "get",
+        })
+          .then((resp) => {
+            console.log(resp);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      function POST() {
+        fetch(url, {
+          method: "post",
+        })
+          .then((resp) => {
+            console.log(resp);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      function PUT() {
+        fetch(url, {
+          method: "put",
+        })
+          .then((resp) => {
+            console.log(resp);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      function DEL() {
+        fetch(url, {
+          method: "delete",
+        })
+          .then((resp) => {
+            console.log(resp);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    </script>
   </body>
 </html>

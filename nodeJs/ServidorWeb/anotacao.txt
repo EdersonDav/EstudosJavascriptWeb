@@ -1,0 +1,4 @@
+Metodos HTTP
+Get = Captura os dados, busca os dados no servidor
+Post = Envia os dados e cadastra no servidor, se já estiver uma informação igual lá, ou é gerada uma cópia ou não é feito o cadastro
+Put = fas a atualização do cadastro, sobrescreve se já existir um igual ao que foi enviado
