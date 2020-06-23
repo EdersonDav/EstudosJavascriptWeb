@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Salve quebrada</h1>
+
+    <script>
+      fetch("http://localhost:5000/", { method: "post" })
+        .then((resp) => {
+          return resp.text();
+        })
+        .then((html) => {
+          console.log(html);
+        });
+      fetch("http://localhost:5000/", { method: "put" })
+        .then((resp) => {
+          return resp.text();
+        })
+        .then((html) => {
+          console.log(html);
+        });
+      fetch("http://localhost:5000/", { method: "delete" })
+        .then((resp) => {
+          return resp.text();
+        })
+        .then((html) => {
+          console.log(html);
+        });
+    </script>
+  </body>
+</html>

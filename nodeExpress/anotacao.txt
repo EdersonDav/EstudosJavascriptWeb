@@ -1,0 +1,2 @@
+O metodo listen do express é onde é passada a porta que o servidor irá rodar
+O express static sempre irá pesquisar no caminho que eu enviei o arquivo index se não encontrar ele não retornara nada 
