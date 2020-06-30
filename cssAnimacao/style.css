@@ -12,38 +12,42 @@
   }
 } */
 
-@keyframes move{
-  0%{top: 0px;}
-  50%{top: 100px;}
-  100%{top: 0px;}
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  /* 50%{top: 100px;} */
+  100% {
+    top: 100px;
+  }
 }
-.box{
+.box {
   position: relative;
   margin-left: 100px;
   width: 200px;
   height: 200px;
   border-style: solid;
   border-radius: 50%;
-  animation: move 5s linear 0s infinite normal forwards;
+  animation: move 5s forwards;
 }
 
-@keyframes bord{
-  0%{
+@keyframes bord {
+  0% {
     background-color: rgba(0, 0, 0, 0.185);
     box-shadow: 3px 1px 10px 10px rgba(0, 0, 0, 0);
   }
-  50%{
+  50% {
     background-color: rgb(0, 0, 0);
     box-shadow: 3px 1px 10px 10px #000;
   }
 
-  100%{
+  100% {
     background-color: rgba(0, 0, 0, 0.185);
     box-shadow: 3px 1px 10px 10px rgba(0, 0, 0, 0);
   }
 }
 
-.btn{
+.btn {
   margin-top: 100px;
   margin-left: 100px;
   display: inline-block;
@@ -52,7 +56,6 @@
   color: #fff;
   font-size: 30px;
   border-radius: 50%;
-  
+
   animation: bord 5s linear 0s infinite normal forwards;
-  
 }
