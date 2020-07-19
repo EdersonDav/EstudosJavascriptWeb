@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  background-color: blueviolet;
+  color: white;
+}
+.menu {
+  display: flex;
+  list-style: none;
+}
+.menu li {
+  margin-left: 25px;
+}
