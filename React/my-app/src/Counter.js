@@ -1,30 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-class Counter extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { count: 1 }
-    this.add = this.add.bind(this)
-  }
-  count = 1;
-  add() {
-    this.setState((state) => { return { count: state.count + 1 } }, () => {
-      localStorage.setItem("state", JSON.stringify(this.state))
-    })
-  }
+const Counter = (props) => {
 
-  componentDidMount() {
-    this.setState(JSON.parse(localStorage.getItem("state")))
+  const [count, setCount] = useState(props.count)
 
-  }
+  useEffect(() => {
+    setCount(Number(localStorage.getItem("count")));
+    return () => {
+      console.log("Not count");
+    }
+  }, [])
 
-  render() {
-    return (
-      <div>
-        <h1>Counter : {this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-      </div>
-    )
+  useEffect(() => {
+    localStorage.setItem("count", count)
+  }, [count])
+
+  function add() {
+    setCount(count + 1);
   }
+  return (
+    <div>
+      <h1>Counter : {count}</h1>
+      <button onClick={add}>Add</button>
+    </div>
+  )
 }
 export default Counter;
