@@ -1,0 +1,17 @@
+{
+  "name": "appbase",
+  "version": "1.0.0",
+  "description": "first app electron",
+  "main": "main.js",
+  "scripts": {
+    "start": " electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
